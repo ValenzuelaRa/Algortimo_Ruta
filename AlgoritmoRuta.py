@@ -1,6 +1,8 @@
+columnas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
+filas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 matriz = [
-    [-3, -3, 2, -3, 3, -2, -2, 1, 2, 0, 2, 1],
+    [-3, -3, 2, -3, 3, -2, -2, 1, 2, 0, 2, 0, 1],
     [2, 3, 'I', -1, -1, 3, 2, 0, -3, -3, 2, 2, 1],
     [1, -3, -3, 2, 3, 1, 3, 3, 2, 1, -2, -2, 3],
     [0, 0, 3, 0, 3, -3, -2, -3, 0, 2, 2, 1, 1],
@@ -14,4 +16,21 @@ matriz = [
     [-1, 0, 1, 2, 1, 0, 'F', 0, -3, 3, 3, -2, -1],
     [1, -3, 1, 0, 1, 2, 3, 1, -2, 3, 3, 0, 3]
 ]
-print(matriz)
+
+
+def matriz_13(matriz, columnas, filas):
+   
+    print("   ", end="")
+    for col in columnas:
+        print(f"  {col} ", end="")
+    print()
+    
+    
+    for i, fila in enumerate(matriz):
+        print(f"{filas[i]:2} ", end="")  
+        for valor in fila:
+            print(f"{valor:3} ", end="") 
+        print()
+
+
+matriz_13(matriz, columnas, filas)
