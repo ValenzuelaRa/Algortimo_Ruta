@@ -34,3 +34,16 @@ def matriz_13(matriz, columnas, filas):
 
 
 matriz_13(matriz, columnas, filas)
+
+
+def preanalisis(matriz, valor):
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if matriz[i][j] == valor:
+                return (i, j)
+    return None
+
+I = preanalisis(matriz, 'I')
+F = preanalisis(matriz, 'F')
+
+print(f'Inicio (I): {I}, Fin (F): {F}')
